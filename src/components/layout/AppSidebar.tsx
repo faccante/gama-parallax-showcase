@@ -35,8 +35,8 @@ export function AppSidebar() {
       : "text-slate-700 hover:bg-white/20 hover:text-slate-900";
 
   return (
-    <Sidebar className="glass-nav border-r border-white/20">
-      <SidebarContent>
+    <Sidebar className="glass-nav border-r border-white/20 h-screen max-h-screen">
+      <SidebarContent className="h-full overflow-y-auto">
         <div className="p-4">
           <h1 className="text-xl font-bold glass-logo">
             {collapsed ? "GS" : "Gama Sibusiso"}
