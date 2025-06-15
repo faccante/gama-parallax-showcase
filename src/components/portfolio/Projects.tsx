@@ -32,35 +32,33 @@ export const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 relative overflow-hidden">
+    <section id="projects" className="py-32 relative overflow-hidden">
       {/* Parallax background */}
       <div className="absolute inset-0 -z-10">
         <div 
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-slate-100/20 to-white/30 rounded-full blur-3xl animate-pulse"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-slate-50/15 to-white/20 rounded-full blur-3xl"
           data-parallax="0.2"
         ></div>
         <div 
-          className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-to-br from-white/30 to-slate-200/20 rounded-full blur-3xl animate-pulse"
+          className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-to-br from-white/20 to-slate-100/15 rounded-full blur-3xl"
           data-parallax="0.3"
-          style={{ animationDelay: '1s' }}
         ></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 glass-morphism p-8 rounded-2xl scroll-animate" data-parallax="0.1">
-          <h2 className="text-3xl md:text-4xl font-bold glass-text mb-4">Featured Projects</h2>
+        <div className="text-center mb-20 glass-morphism p-8 rounded-2xl scroll-animate mx-4" data-parallax="0.1">
+          <h2 className="text-3xl md:text-4xl font-bold glass-text mb-6">Featured Projects</h2>
           <p className="text-lg glass-text-light max-w-2xl mx-auto">
             Here are some of the projects I've worked on during my studies and personal time.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 px-4">
           {projects.map((project, index) => (
             <Card 
               key={index} 
               className="overflow-hidden glass-card hover-scale transition-all duration-500 scroll-animate"
               data-parallax={`${0.05 + index * 0.02}`}
-              style={{ animationDelay: `${index * 0.3}s` }}
             >
               <div className="aspect-video overflow-hidden relative">
                 <img
@@ -70,12 +68,12 @@ export const Projects = () => {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
-              <CardHeader className="glass-content">
+              <CardHeader className="glass-content pb-4">
                 <CardTitle className="glass-text">{project.title}</CardTitle>
                 <CardDescription className="glass-text-light">{project.description}</CardDescription>
               </CardHeader>
               <CardContent className="glass-content">
-                <div className="flex flex-wrap gap-2 mb-4">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
@@ -85,7 +83,7 @@ export const Projects = () => {
                     </span>
                   ))}
                 </div>
-                <div className="flex gap-2">
+                <div className="flex gap-3">
                   <Button variant="outline" size="sm" className="glass-button-outline hover-scale" asChild>
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                       <Github className="h-4 w-4 mr-2" />
