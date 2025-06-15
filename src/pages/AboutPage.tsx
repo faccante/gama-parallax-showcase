@@ -12,15 +12,7 @@ const AboutPage = () => {
         <div className="glass-morphism p-12 rounded-2xl">
           <h1 className="text-4xl md:text-5xl font-bold glass-text text-center mb-12">About Me</h1>
           
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <img
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=400&h=500&fit=crop&crop=face"
-                alt="Gama Sibusiso"
-                className="w-full rounded-lg object-cover"
-              />
-            </div>
-            
+          <div className="max-w-3xl mx-auto space-y-8">
             <div className="space-y-6">
               <h2 className="text-2xl font-semibold glass-text">My Journey</h2>
               <p className="glass-text-light text-lg leading-relaxed">
