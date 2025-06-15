@@ -46,11 +46,14 @@ export const Projects = () => {
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-24 glass-morphism p-10 rounded-2xl scroll-animate mx-4" data-parallax="0.1">
-          <h2 className="text-3xl md:text-4xl font-bold glass-text mb-6">Featured Projects</h2>
-          <p className="text-lg glass-text-light max-w-2xl mx-auto">
-            Here are some of the projects I've worked on during my studies and personal time.
-          </p>
+        <div className="text-center mb-24 scroll-animate" data-parallax="0.1">
+          <h2 className="text-4xl md:text-5xl font-bold glass-text mb-8">Featured Projects</h2>
+          <div className="glass-morphism p-10 rounded-2xl mx-4">
+            <h3 className="text-xl md:text-2xl font-semibold glass-text mb-4">My Development Work</h3>
+            <p className="text-lg glass-text-light max-w-2xl mx-auto">
+              Here are some of the projects I've worked on during my studies and personal time.
+            </p>
+          </div>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10 px-4">
