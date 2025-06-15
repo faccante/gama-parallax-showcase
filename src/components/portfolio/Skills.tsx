@@ -22,9 +22,17 @@ export const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20">
+    <section id="skills" className="py-20 relative overflow-hidden">
+      {/* Parallax background elements */}
+      <div className="absolute inset-0 -z-10">
+        <div className="absolute top-0 right-1/4 w-80 h-80 bg-green-500/20 rounded-full blur-3xl animate-pulse" 
+             style={{ transform: 'translateY(var(--scroll-y, 0) * 0.25px)' }}></div>
+        <div className="absolute bottom-0 left-1/3 w-60 h-60 bg-purple-500/20 rounded-full blur-3xl animate-pulse delay-700" 
+             style={{ transform: 'translateY(var(--scroll-y, 0) * 0.35px)' }}></div>
+      </div>
+      
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" style={{ transform: 'translateY(var(--scroll-y, 0) * 0.15px)' }}>
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Skills & Technologies</h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Here are the technologies and programming languages I work with.
@@ -33,7 +41,8 @@ export const Skills = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="hover-scale transition-all duration-300">
+            <Card key={index} className="hover-scale transition-all duration-300 backdrop-blur-lg bg-white/10 border-white/20 shadow-2xl hover:bg-white/15"
+                  style={{ transform: `translateY(var(--scroll-y, 0) * ${0.1 + index * 0.02}px)` }}>
               <CardHeader>
                 <CardTitle className="text-lg text-center">{category.title}</CardTitle>
               </CardHeader>
@@ -42,7 +51,7 @@ export const Skills = () => {
                   {category.skills.map((skill, skillIndex) => (
                     <span
                       key={skillIndex}
-                      className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium"
+                      className="px-3 py-1 backdrop-blur-sm bg-primary/20 text-primary rounded-full text-sm font-medium border border-primary/30 hover:bg-primary/30 transition-colors"
                     >
                       {skill}
                     </span>
