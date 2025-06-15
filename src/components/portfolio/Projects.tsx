@@ -32,48 +32,67 @@ export const Projects = () => {
   ];
 
   return (
-    <section id="projects" className="py-20 bg-muted/30">
+    <section id="projects" className="py-20 relative overflow-hidden">
+      {/* Parallax background */}
+      <div className="absolute inset-0 -z-10">
+        <div 
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-500/15 to-purple-500/20 rounded-full blur-3xl animate-pulse glass-float"
+          data-parallax="0.2"
+        ></div>
+        <div 
+          className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/15 rounded-full blur-3xl animate-pulse glass-float"
+          data-parallax="0.3"
+          style={{ animationDelay: '1s' }}
+        ></div>
+      </div>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Featured Projects</h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+        <div className="text-center mb-16 glass-morphism p-8 rounded-2xl glass-float" data-parallax="0.1">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 glass-text">Featured Projects</h2>
+          <p className="text-lg text-white/80 max-w-2xl mx-auto glass-text">
             Here are some of the projects I've worked on during my studies and personal time.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project, index) => (
-            <Card key={index} className="overflow-hidden hover-scale transition-all duration-300">
-              <div className="aspect-video overflow-hidden">
+            <Card 
+              key={index} 
+              className="overflow-hidden glass-card hover-scale transition-all duration-500 glass-float"
+              data-parallax={`${0.05 + index * 0.02}`}
+              style={{ animationDelay: `${index * 0.3}s` }}
+            >
+              <div className="aspect-video overflow-hidden relative">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               </div>
-              <CardHeader>
-                <CardTitle>{project.title}</CardTitle>
-                <CardDescription>{project.description}</CardDescription>
+              <CardHeader className="glass-content">
+                <CardTitle className="text-white glass-text">{project.title}</CardTitle>
+                <CardDescription className="text-white/70 glass-text">{project.description}</CardDescription>
               </CardHeader>
-              <CardContent>
+              <CardContent className="glass-content">
                 <div className="flex flex-wrap gap-2 mb-4">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
-                      className="px-2 py-1 bg-secondary text-secondary-foreground rounded text-xs font-medium"
+                      className="glass-tech-tag"
                     >
                       {tech}
                     </span>
                   ))}
                 </div>
                 <div className="flex gap-2">
-                  <Button variant="outline" size="sm" asChild>
+                  <Button variant="outline" size="sm" className="glass-button-outline hover-scale" asChild>
                     <a href={project.githubUrl} target="_blank" rel="noopener noreferrer">
                       <Github className="h-4 w-4 mr-2" />
                       Code
                     </a>
                   </Button>
-                  <Button size="sm" asChild>
+                  <Button size="sm" className="glass-button hover-scale" asChild>
                     <a href={project.liveUrl} target="_blank" rel="noopener noreferrer">
                       <Code className="h-4 w-4 mr-2" />
                       Live Demo
