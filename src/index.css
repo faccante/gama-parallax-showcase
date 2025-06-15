@@ -106,161 +106,167 @@
 @layer components {
   /* Glassmorphism Base Components */
   .glass-morphism {
-    @apply backdrop-blur-xl bg-white/10 border border-white/20 shadow-2xl rounded-2xl;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.05));
+    @apply backdrop-blur-xl bg-white/20 border border-white/30 shadow-2xl rounded-2xl;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
     backdrop-filter: blur(20px);
     box-shadow: 
-      0 8px 32px rgba(0, 0, 0, 0.3),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2),
-      inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.2);
   }
 
   .glass-card {
-    @apply backdrop-blur-xl bg-white/5 border border-white/10 shadow-2xl rounded-xl transition-all duration-500;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+    @apply backdrop-blur-xl bg-white/15 border border-white/20 shadow-2xl rounded-xl transition-all duration-500;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.05));
     backdrop-filter: blur(15px);
     box-shadow: 
-      0 8px 32px rgba(0, 0, 0, 0.4),
-      inset 0 1px 0 rgba(255, 255, 255, 0.15),
-      inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+      0 8px 32px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.15);
   }
 
   .glass-card:hover {
-    @apply bg-white/10 border-white/20 shadow-3xl;
+    @apply bg-white/25 border-white/40 shadow-3xl;
     transform: translateY(-5px) scale(1.02);
     box-shadow: 
-      0 20px 60px rgba(0, 0, 0, 0.5),
-      inset 0 1px 0 rgba(255, 255, 255, 0.25),
-      inset 0 -1px 0 rgba(255, 255, 255, 0.1);
+      0 20px 60px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.6),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.25);
   }
 
   /* Navigation Glass Styles */
   .glass-nav {
-    @apply backdrop-blur-2xl bg-white/5 border-b border-white/10 shadow-2xl;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+    @apply backdrop-blur-2xl bg-white/10 border-b border-white/20 shadow-2xl;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
     backdrop-filter: blur(25px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   }
 
   .glass-logo {
-    @apply text-transparent bg-gradient-to-r from-cyan-400 via-purple-400 to-blue-400 bg-clip-text;
-    filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.3));
+    @apply text-transparent bg-gradient-to-r from-slate-700 via-slate-900 to-slate-700 bg-clip-text;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.1));
   }
 
   .glass-nav-item {
-    @apply text-white/90 hover:text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+    @apply text-slate-700 hover:text-slate-900 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-300;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
     backdrop-filter: blur(10px);
     border: 1px solid transparent;
   }
 
   .glass-nav-item:hover {
-    @apply bg-white/10 border-white/20 text-cyan-400;
-    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
+    @apply bg-white/20 border-white/30 text-slate-900;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
 
   .glass-menu-button {
-    @apply backdrop-blur-sm bg-white/10 border border-white/20 hover:bg-white/20 text-white;
+    @apply backdrop-blur-sm bg-white/20 border border-white/30 hover:bg-white/30 text-slate-700;
   }
 
   .glass-mobile-menu {
-    @apply backdrop-blur-xl bg-white/10 border-t border-white/20 rounded-b-2xl;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
+    @apply backdrop-blur-xl bg-white/15 border-t border-white/30 rounded-b-2xl;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.05));
   }
 
   .glass-mobile-nav-item {
-    @apply text-white/90 hover:text-cyan-400 block px-3 py-2 rounded-lg text-base font-medium w-full text-left transition-all duration-300;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
+    @apply text-slate-700 hover:text-slate-900 block px-3 py-2 rounded-lg text-base font-medium w-full text-left transition-all duration-300;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.02));
     backdrop-filter: blur(10px);
     border: 1px solid transparent;
   }
 
   .glass-mobile-nav-item:hover {
-    @apply bg-white/10 border-white/20;
-    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+    @apply bg-white/20 border-white/30;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   }
 
   /* Button Glass Styles */
   .glass-button {
-    @apply backdrop-blur-xl bg-gradient-to-r from-cyan-500/20 to-purple-500/20 border border-white/30 hover:from-cyan-500/30 hover:to-purple-500/30 text-white font-medium transition-all duration-300;
+    @apply backdrop-blur-xl bg-gradient-to-r from-white/30 to-white/20 border border-white/40 hover:from-white/40 hover:to-white/30 text-slate-800 font-medium transition-all duration-300;
     box-shadow: 
-      0 4px 15px rgba(0, 255, 255, 0.2),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      0 4px 15px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.4);
   }
 
   .glass-button:hover {
     box-shadow: 
-      0 8px 25px rgba(0, 255, 255, 0.4),
-      inset 0 1px 0 rgba(255, 255, 255, 0.3);
+      0 8px 25px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.5);
     transform: translateY(-2px);
   }
 
   .glass-button-outline {
-    @apply backdrop-blur-xl bg-white/5 border-2 border-white/30 hover:bg-white/10 hover:border-cyan-400/50 text-white font-medium transition-all duration-300;
+    @apply backdrop-blur-xl bg-white/10 border-2 border-white/40 hover:bg-white/20 hover:border-white/60 text-slate-800 font-medium transition-all duration-300;
     box-shadow: 
-      0 4px 15px rgba(0, 0, 0, 0.2),
-      inset 0 1px 0 rgba(255, 255, 255, 0.1);
+      0 4px 15px rgba(0, 0, 0, 0.1),
+      inset 0 1px 0 rgba(255, 255, 255, 0.2);
   }
 
   .glass-button-outline:hover {
     box-shadow: 
-      0 8px 25px rgba(0, 255, 255, 0.3),
-      inset 0 1px 0 rgba(255, 255, 255, 0.2);
+      0 8px 25px rgba(0, 0, 0, 0.15),
+      inset 0 1px 0 rgba(255, 255, 255, 0.3);
     transform: translateY(-2px);
   }
 
   /* Icon Glass Styles */
   .glass-icon {
-    @apply text-white/80 hover:text-cyan-400 transition-all duration-300 p-3 rounded-full backdrop-blur-xl bg-white/10 border border-white/20 hover:bg-white/20;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    @apply text-slate-600 hover:text-slate-800 transition-all duration-300 p-3 rounded-full backdrop-blur-xl bg-white/20 border border-white/30 hover:bg-white/30;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
 
   .glass-icon:hover {
-    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px) scale(1.1);
   }
 
   /* Text Glass Effects */
   .glass-text {
-    text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    @apply text-slate-800;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+
+  .glass-text-light {
+    @apply text-slate-600;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
   }
 
   /* Content Glass Styles */
   .glass-content {
-    @apply backdrop-blur-sm bg-white/5 rounded-lg;
+    @apply backdrop-blur-sm bg-white/10 rounded-lg;
   }
 
   .glass-skill-tag {
-    @apply px-3 py-1 backdrop-blur-sm bg-gradient-to-r from-cyan-500/20 to-purple-500/20 text-white rounded-full text-sm font-medium border border-white/30 hover:from-cyan-500/30 hover:to-purple-500/30 transition-all duration-300;
-    box-shadow: 0 2px 10px rgba(0, 255, 255, 0.2);
+    @apply px-3 py-1 backdrop-blur-sm bg-gradient-to-r from-white/30 to-white/20 text-slate-800 rounded-full text-sm font-medium border border-white/40 hover:from-white/40 hover:to-white/30 transition-all duration-300;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   }
 
   .glass-skill-tag:hover {
-    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.4);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     transform: translateY(-1px) scale(1.05);
   }
 
   .glass-tech-tag {
-    @apply px-2 py-1 backdrop-blur-sm bg-white/10 text-white/90 rounded text-xs font-medium border border-white/20;
+    @apply px-2 py-1 backdrop-blur-sm bg-white/20 text-slate-700 rounded text-xs font-medium border border-white/30;
   }
 
   .glass-contact-item {
-    @apply flex items-center justify-center space-x-4 p-4 rounded-lg backdrop-blur-sm bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    @apply flex items-center justify-center space-x-4 p-4 rounded-lg backdrop-blur-sm bg-white/15 border border-white/20 hover:bg-white/25 transition-all duration-300;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
 
   .glass-contact-item:hover {
-    box-shadow: 0 8px 25px rgba(0, 255, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
   }
 
   .glass-info-item {
-    @apply p-3 rounded-lg backdrop-blur-sm bg-white/5 border border-white/10 hover:bg-white/10 transition-all duration-300;
+    @apply p-3 rounded-lg backdrop-blur-sm bg-white/15 border border-white/20 hover:bg-white/25 transition-all duration-300;
   }
 
   .glass-image {
-    @apply border-2 border-white/20 backdrop-blur-sm;
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    @apply border-2 border-white/30 backdrop-blur-sm;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   }
 
   /* Animation Classes */
@@ -273,11 +279,52 @@
   }
 
   .glass-hover:hover {
-    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
   }
 
-  .glass-float {
-    animation: glassFloat 6s ease-in-out infinite;
+  /* Scroll into view animations */
+  .scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.6s ease-out;
+  }
+
+  .scroll-animate.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .scroll-animate-left {
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: all 0.6s ease-out;
+  }
+
+  .scroll-animate-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-animate-right {
+    opacity: 0;
+    transform: translateX(30px);
+    transition: all 0.6s ease-out;
+  }
+
+  .scroll-animate-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  .scroll-animate-scale {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.6s ease-out;
+  }
+
+  .scroll-animate-scale.visible {
+    opacity: 1;
+    transform: scale(1);
   }
 
   .parallax-element {
@@ -301,34 +348,9 @@
     }
   }
 
-  @keyframes glassFloat {
-    0%, 100% {
-      transform: translateY(0px) rotateX(0deg);
-    }
-    25% {
-      transform: translateY(-10px) rotateX(2deg);
-    }
-    50% {
-      transform: translateY(-5px) rotateX(-1deg);
-    }
-    75% {
-      transform: translateY(-15px) rotateX(1deg);
-    }
-  }
-
-  @keyframes glassShimmer {
-    0% {
-      background-position: -200% center;
-    }
-    100% {
-      background-position: 200% center;
-    }
-  }
-
-  .glass-shimmer {
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-    background-size: 200% 100%;
-    animation: glassShimmer 3s infinite;
+  /* Enhanced shadow utilities */
+  .shadow-3xl {
+    box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.15);
   }
 }
 
@@ -337,9 +359,4 @@
   html {
     scroll-behavior: smooth;
   }
-}
-
-/* Enhanced shadow utilities */
-.shadow-3xl {
-  box-shadow: 0 35px 60px -12px rgba(0, 0, 0, 0.25);
 }

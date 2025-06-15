@@ -36,20 +36,20 @@ export const Projects = () => {
       {/* Parallax background */}
       <div className="absolute inset-0 -z-10">
         <div 
-          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-blue-500/15 to-purple-500/20 rounded-full blur-3xl animate-pulse glass-float"
+          className="absolute top-1/4 left-1/4 w-96 h-96 bg-gradient-to-br from-slate-100/20 to-white/30 rounded-full blur-3xl animate-pulse"
           data-parallax="0.2"
         ></div>
         <div 
-          className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/15 rounded-full blur-3xl animate-pulse glass-float"
+          className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-gradient-to-br from-white/30 to-slate-200/20 rounded-full blur-3xl animate-pulse"
           data-parallax="0.3"
           style={{ animationDelay: '1s' }}
         ></div>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16 glass-morphism p-8 rounded-2xl glass-float" data-parallax="0.1">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4 glass-text">Featured Projects</h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto glass-text">
+        <div className="text-center mb-16 glass-morphism p-8 rounded-2xl scroll-animate" data-parallax="0.1">
+          <h2 className="text-3xl md:text-4xl font-bold glass-text mb-4">Featured Projects</h2>
+          <p className="text-lg glass-text-light max-w-2xl mx-auto">
             Here are some of the projects I've worked on during my studies and personal time.
           </p>
         </div>
@@ -58,7 +58,7 @@ export const Projects = () => {
           {projects.map((project, index) => (
             <Card 
               key={index} 
-              className="overflow-hidden glass-card hover-scale transition-all duration-500 glass-float"
+              className="overflow-hidden glass-card hover-scale transition-all duration-500 scroll-animate"
               data-parallax={`${0.05 + index * 0.02}`}
               style={{ animationDelay: `${index * 0.3}s` }}
             >
@@ -68,11 +68,11 @@ export const Projects = () => {
                   alt={project.title}
                   className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
               </div>
               <CardHeader className="glass-content">
-                <CardTitle className="text-white glass-text">{project.title}</CardTitle>
-                <CardDescription className="text-white/70 glass-text">{project.description}</CardDescription>
+                <CardTitle className="glass-text">{project.title}</CardTitle>
+                <CardDescription className="glass-text-light">{project.description}</CardDescription>
               </CardHeader>
               <CardContent className="glass-content">
                 <div className="flex flex-wrap gap-2 mb-4">
